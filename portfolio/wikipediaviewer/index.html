@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wiki Viewer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="wiki.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Bungee+Inline|Roboto">
+  </head>
+  <body>
+    <div class="doc">
+      <div>
+        <div class="title">
+          <p id="title-text">Wikipedia Viewer</p>
+        </div>
+        
+        <div class="info">
+            <input type="search" name="search" class="search" id="search-box">
+          <a href="#" class="btn btn-default btn-med" id="search-button" title="Submit">
+            <span class="glyphicon glyphicon-search"></span>
+          </a>
+          <a href="#" class="btn btn-default btn-med" id="search-random" title="Random Wiki">
+            <span class="glyphicon glyphicon-flash"></span>
+          </a>
+        </div>
+      </div>
+      
+      <div id="num-results"></div>
+      
+      <div id="result-table"></div>
+      
+      <div id="credit">
+        <p>Powered by <a href="https://www.mediawiki.org/wiki/MediaWiki" target="_blank">MediaWiki</a> API
+        <p id="me">Site designed by Chris Johnson <a href="https://twitter.com/MechaEnigma" target="_blank">@MechaEnigma</a></p>
+        </div>
+    </div>  
+    
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="wiki.js"></script>
+  </body>
+</html>

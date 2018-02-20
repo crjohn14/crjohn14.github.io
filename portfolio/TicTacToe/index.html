@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tic-Tac-Toe</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="tictactoe.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div id="title">
+      <h1><span class="color1">T</span><span class="color2">i</span><span class="color3">c</span><span class="color4"> -</span>
+        <span class="color1">T</span><span class="color2">a</span><span class="color3">c</span><span class="color4"> -</span>
+        <span class="color1">T</span><span class="color2">o</span><span class="color3">e</span></h1>
+    </div>
+    
+    <div class="container scoreboard">
+      <div class="row scores">
+        <div class="col-xs-4">
+          <div class="score-info">Player 1</div>
+          <button class="score-val" id="player1Score" disabled>0</button>
+        </div>
+        <div class="col-xs-4">
+          <div class="score-info">Draw</div>
+          <button class="score-val" id="drawScore" disabled>0</button>
+        </div>
+        <div class="col-xs-4">
+          <div class="score-info">Player 2</div>
+          <button class="score-val" id="player2Score" disabled>0</button>
+        </div>
+      </div>
+      <div class="row message">Select Options</div>
+    </div>
+    
+    <div class="arena">
+      <div id="options">
+        Select number of players:
+        <form id="playerForm">
+          <input id="player2" type="radio" name="num_players" value="2" checked> 2 Player &nbsp;&nbsp;
+          <input id="player1" type="radio" name="num_players" value="1"> vs AI<br>
+        </form>
+        <form id="diffForm">
+        </br>
+        Select AI difficulty:<br>
+          <input id="easy" type="radio" name="difficulty" value="easy"> Easy &nbsp;&nbsp;
+          <input id="hard" type="radio" name="difficulty" value="hard" checked> Hard<br>
+        </form>
+        <br>
+        <div id="markMessage">Select player 1's mark:</div>
+        <form id="markForm">
+          <input id="Xfirst" type="radio" name="first_mark" value="X" checked> X &nbsp;&nbsp;
+          <input id="Ofirst" type="radio" name="first_mark" value="O"> O
+        </form>
+        <br>
+    </div>
+    
+      <div class="buttons">
+        <button class="position" id="pos-1" value=1></button>
+        <button class="position" id="pos-2" value=2></button>
+        <button class="position" id="pos-3" value=3></button>
+        <button class="position" id="pos-4" value=4></button>
+        <button class="position" id="pos-5" value=5></button>
+        <button class="position" id="pos-6" value=6></button>
+        <button class="position" id="pos-7" value=7></button>
+        <button class="position" id="pos-8" value=8></button>
+        <button class="position" id="pos-9" value=9></button>
+      </div>
+      <div class="new-game">
+        <button id="toggle">Start Game</button>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

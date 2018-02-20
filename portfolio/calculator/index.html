@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Simple Calculator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="calc.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="calc.css">
+  </head>
+  <body>
+    <div id="calc">
+      <div class='title'>CJ-2K</div>
+      <div id="display">
+        <p id='answer'>0</p>
+        <p id='equation'></p>
+      </div>
+      <div id="buttons">
+        <button class='invis'></button>
+        <button class='red' value="ac">AC</button>
+        <button class='red' value='ce'>CE</button>
+        <button value='7'>7</button>
+        <button value='8'>8</button>
+        <button value='9'>9</button>
+        <button class='operator' value='+'>+</button>
+        <button value='4'>4</button>
+        <button value='5'>5</button>
+        <button value='6'>6</button>
+        <button class='operator' value='-'>-</button>
+        <button value='1'>1</button>
+        <button value='2'>2</button>
+        <button value='3'>3</button>
+        <button class='operator' value='*'>*</button>
+        <button value='0'>0</button>
+        <button value='.'>.</button>
+        <button class='equals' value='='>=</button>
+        <button class='operator' value='/'>/</button>
+      </div>
+    </div>
+    <div class='credits'>          
+      <p id="me">Designed by Chris Johnson <a href="https://twitter.com/MechaEnigma" target="_blank">@MechaEnigma</a></p>
+    </div>
+  </body>
+</html>

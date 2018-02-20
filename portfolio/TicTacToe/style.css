@@ -1,0 +1,170 @@
+/* 
+    Created on : Feb 2, 2017, 7:35:12 PM
+    Author     : cj
+*/
+:root {
+--grey-scheme: #59594A;
+--teal-scheme: #A3BFA8;
+--red-scheme: #BE6E46;
+--green-scheme: #CDE7B0;
+--blue-scheme: #7286A0;
+}
+
+body {
+    padding: 50px 0px 50px 0px;
+    background-color: var(--grey-scheme, grey);
+    font-family: Orbitron;
+    text-align: center;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 5em;
+    padding: 0px 0px 25px 0px;
+}
+
+.color1 {
+    color: var(--red-scheme, red);
+}
+
+.color2 {
+    color: var(--green-scheme, green);
+}
+
+.color3 {
+    color: var(--teal-scheme, teal);
+}
+
+.color4 {
+    color: white;
+}
+
+.scoreboard {
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    padding: 25px 0px 25px 0px;
+    background-color: var(--teal-scheme, teal);
+    border-radius: 20px 20px 0px 0px;
+}
+
+.arena {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px 0px 25px 0px;
+    width: 500px;
+    background-color: var(--red-scheme, red);
+    border-radius: 0px 0px 20px 20px;
+}
+
+.score-info {
+    font-size: 1.9em;
+}
+
+.score-val {
+    background-color: white;
+    font-size: 3em;
+    width: 80px;
+    padding-top: 9px;
+    border-radius: 5px;
+}
+
+.message {
+    font-size: 3.5em;
+    padding-top: 15px;
+}
+
+#options {
+    font-size: 1.7em;
+}
+
+#diffForm {
+    display: none;
+}
+
+.buttons {
+    background-color: black;
+    width: 320px;
+    height: 320px;
+    margin: 35px;
+    border-radius: 5px 5px 5px 5px;
+    display: none;
+}
+
+.new-game {
+    font-size: 2em;
+}
+
+#toggle {
+    background-color: var(--teal-scheme, teal);
+    border: none;
+    padding: 7px 20px;
+    border: 2px solid var(--grey-scheme, grey);
+    border-radius: 5px;
+}
+
+#toggle:hover {
+    color: var(--red-scheme, red);
+}
+
+.position {
+    height: 100px;
+    width: 100px;
+    padding-top: 8px;
+    float: left;
+    font-size: 5em;
+    border: none;
+    background-color: var(--teal-scheme, teal);
+}
+
+#pos-1 {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px 0px 0px 0px;
+}
+
+#pos-2 {
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+#pos-3 {
+    margin-left: 5px;
+    margin-bottom: 5px;
+    border-radius: 0px 5px 0px 0px;
+}
+
+#pos-4 {
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+#pos-5 {
+    margin: 5px;
+}
+
+#pos-6 {
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+#pos-7 {
+    margin-right: 5px;
+    margin-top: 5px;
+    border-radius: 0px 0px 0px 5px;
+}
+
+#pos-8 {
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+#pos-9 {
+    margin-left: 5px;
+    margin-top: 5px;
+    border-radius: 0px 0px 5px 0px;
+}
