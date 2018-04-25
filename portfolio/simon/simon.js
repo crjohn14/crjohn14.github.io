@@ -24,7 +24,10 @@ var playerTurn;
 // player mistake resets the game with new sequence
 var strict;
 
-// button sounds
+// current sound
+var curSound;
+
+// sound files
 var sounds = {
     green: new Audio('https://www.dropbox.com/s/gcqbfqqgefco7nb/simonSound1.mp3?raw=1'),
     red: new Audio('https://www.dropbox.com/s/ihr5yz94gnest30/simonSound2.mp3?raw=1'),
@@ -60,8 +63,10 @@ $(document).ready(function() {
     // start button
     $("#start").click(function() {
         resetGame();
-        $('.simon-but').removeClass('unclickable').addClass('clickable');
-        nextTurn();
+        timeoutArray.push(setTimeout(function() {
+            $('.simon-but').removeClass('unclickable').addClass('clickable');
+            nextTurn();
+        }, 1500));
     });
   
     // simon buttons
@@ -69,6 +74,7 @@ $(document).ready(function() {
         $('.simon-but').removeClass('clickable').addClass('unclickable');
         clearTimeout(resetTimeout);
         resetTimer();
+        stopAudio();
         var val = Number($(this).attr('data-value'));
         if(simonSequence[sequencePosition] == val) {
             rightAnswer(val);
@@ -196,7 +202,8 @@ function buttonBlink(but, i, color) {
     var delay = i * 1000;
     timeoutArray.push(setTimeout(function() {
         but.removeClass(color).addClass(color + '-light');
-        sounds[color].play();
+        curSound = sounds[color];
+        curSound.play();
     }, delay));
     timeoutArray.push(setTimeout(function() {
         but.removeClass(color + '-light').addClass(color);
@@ -246,18 +253,29 @@ function rightAnswer(val) {
 function wrongAnswer() {
     $('.simon-but').removeClass('clickable').addClass('unclickable');
     clearTimeout(resetTimeout);
-    sounds['error'].play();
-    $('.scoreboard').html('!!!!!!!!!!!!!!!!!!!!');
+    curSound = sounds['error'];
+    curSound.play();
+    var msg = '!!' + String(playerTurn) + '!!';
+    $('.scoreboard').css('text-align', 'center').css('padding-left', '0px').html(msg);
     if(strict) {
         timeoutArray.push(setTimeout(function() {
             resetGame();
             nextTurn();
-        }, 2500));
+        }, 3000));
     } else {
         timeoutArray.push(setTimeout(function() {
+            $('.scoreboard').css('padding-left', '8px').css('text-align','left');
             displayLevel();
             sequencePosition = 0;
             showSequence();
         }, 1500));
     }
+}
+
+/**
+ * Stops current sound
+ */
+function stopAudio() {
+    curSound.pause();
+    curSound.currentTime = 0;
 }
