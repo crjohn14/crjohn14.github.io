@@ -1,0 +1,264 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 2, 2017, 12:43:51 PM
+    Author     : cj
+*/
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Roboto|Orbitron');
+
+:root {
+--green-dark: #2db001;
+--green-light: #41ff02;
+--red-dark: #cf0300;
+--red-light: #ff2e23;
+--yellow-dark: #c7c400;
+--yellow-light: #fbff29;
+--blue-dark: #1002d4;
+--blue-light: #4599ff;
+}
+
+body {
+    text-align: center;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.game {
+    width: 640px;
+    margin: auto;
+}
+
+.simon-but {
+    width: 300px;
+    height: 300px;
+    border-style: solid;
+    border-color: black;
+    display: inline-block;
+    margin: 0px 0px -6px -4px;
+}
+
+.top-left {
+    border-top-left-radius: 100%;
+    border-width: 30px 15px 15px 30px;
+}
+
+.top-right {
+    border-top-right-radius: 100%;
+    border-width: 30px 30px 15px 15px;
+    box-shadow: 5px 5px 5px grey;
+}
+
+.bot-left {
+    border-bottom-left-radius: 100%;
+    border-width: 15px 15px 30px 30px;
+    box-shadow: 5px 5px 5px grey;
+}
+
+.bot-right {
+    border-bottom-right-radius: 100%;
+    border-width: 15px 30px 30px 15px;
+    box-shadow: 5px 5px 5px grey;
+}
+
+.controls {
+    position: relative;
+    bottom: 450px;
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 100%;
+    border-width: 20px;
+    background-color: #dedede;
+    display: block;
+}
+
+.dark-back {
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+    width: 260px;
+    height: 120px;
+    position: relative;
+    padding: 35px 0px 5px 0px;
+    background-color: black;
+}
+
+.light-back {
+    height: 100px;
+    padding: 20px 0px 30px 0px;
+    margin: 0px;
+}
+
+.logo {
+    font-size: 66px;
+    color: #dedede;
+    font-family: 'Black Han Sans';
+    letter-spacing: -2px;
+}
+
+.row {
+    display: inline;
+    height: 60px;
+    width: 300px;
+    position: relative;
+    top: -30px;
+}
+
+.scoreboard {
+    width: 160px;
+    height: 30px;
+    margin: auto;
+    padding-left: 8px;
+    border: 3px solid grey;
+    border-radius: 10px;
+    background-color: #000;
+    font-family: Orbitron;
+    font-weight: bold;
+    font-size: 21px;
+    letter-spacing: 2px;
+    text-align: left;
+    color: #e06a1b
+}
+
+.column {
+    width: 50px;
+    height: 60px;
+    margin: auto;
+    display: inline-block;
+    position: relative;
+}
+
+.small-but {
+    height: 25px;
+    width: 25px;
+    position: relative;
+    top: 7px;
+    margin: auto;
+    margin-bottom: 12px;
+    margin-top: -5px;
+    border-radius: 100%;
+    border-style: solid;
+    border-width: 3px;
+    border-color: grey;
+    cursor: pointer;
+}
+
+.label {
+    font-family: Roboto;
+    font-size: 11px;
+    color: black;
+}
+
+.green {
+    background-color: var(--green-dark, green);
+}
+
+.green-light {
+    background-color: var(--green-light, green);
+}
+
+.red {
+    background-color: var(--red-dark, red);
+}
+
+.red-light {
+    background-color: var(--red-light, red);
+}
+
+.yellow {
+    background-color: var(--yellow-dark, yellow);
+}
+
+.yellow-light {
+    background-color: var(--yellow-light, yellow);
+}
+
+.blue {
+    background-color: var(--blue-dark, blue);
+}
+
+.blue-light {
+    background-color: var(--blue-light, blue);
+}
+
+.unclickable {
+    pointer-events: none;
+}
+
+.clickable {
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+/* on/off switches adapted from https://proto.io/freebies/onoff/ */
+
+.onoffswitch {
+    position: relative;
+    width: 50px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #999999;
+    border-radius: 10px;
+}
+.onoffswitch-inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 20px;
+    padding: 0;
+    line-height: 20px;
+    font-size: 10px;
+    color: white;
+    font-family: Trebuchet, Arial, sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "ON";
+    padding-right: 20px;
+    background-color: #39C7E3;
+    color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "OFF";
+    padding-right: 5px;
+    background-color: #EEEEEE;
+    color: #999999;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block;
+    width: 17px;
+    margin: 3px;
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 28px;
+    border: 2px solid #999999;
+    border-radius: 20px;
+    transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px;
+}
