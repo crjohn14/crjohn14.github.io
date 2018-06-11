@@ -35,6 +35,7 @@
     },
     "devDependencies": {
         "browser-sync": "2.18.13",
+        "cypress": "^3.0.1",
         "gulp": "^3.9.1",
         "gulp-clean-css": "3.9.0",
         "gulp-header": "1.8.9",

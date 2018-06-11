@@ -4,7 +4,7 @@ $(document).ready(function() {
   $('input#search-box').autocomplete({
     source: function(request, response) {
       $.ajax({
-        url: "http://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=" + request.term,
+        url: "https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=" + request.term,
         dataType: "jsonp",
         success: function(data) {
           response(data[1]);
@@ -79,7 +79,7 @@ var updateResults = function(data) {
   var results = data.query.search;
   
   // get page extracts from titles
-  var extractQuery = "http://en.wikipedia.org/w/api.php?action=query&prop=extracts&format=json&exsentences=2&exlimit=max&exintro=&explaintext=&titles=";
+  var extractQuery = "https://en.wikipedia.org/w/api.php?action=query&prop=extracts&format=json&exsentences=2&exlimit=max&exintro=&explaintext=&titles=";
   
   for(var i = 0; i < results.length - 1; i++) {
     extractQuery += results[i].title + "|";
